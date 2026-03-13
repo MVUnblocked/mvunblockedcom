@@ -107,7 +107,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 4px;                    /* small gap so letters don't touch */
+    gap: 4px;
 }
 
 .games-title {
@@ -1219,11 +1219,11 @@ const easterEggs = {
 
     "67": () => {        
 
-        if (document.getElementById("dance-party-overlay")) return;
+        if (document.getElementById("easteregg-overlay")) return;
 
         // Create overlay
         const overlay = document.createElement("div");
-        overlay.id = "dance-party-overlay";
+        overlay.id = "easteregg-overlay";
         overlay.style.cssText = `
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background: rgba(0,0,0,0.8) url('https://media.tenor.com/xEc6rOUcWY0AAAAM/sixseven-six.gif') center/cover no-repeat;
@@ -1257,11 +1257,11 @@ const easterEggs = {
     },
     "calculator": () => {        
 
-        if (document.getElementById("dance-party-overlay")) return;
+        if (document.getElementById("easteregg-overlay")) return;
 
         // Create overlay
         const overlay = document.createElement("div");
-        overlay.id = "dance-party-overlay";
+        overlay.id = "easteregg-overlay";
         overlay.style.cssText = `
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background: rgba(0,0,0,0.8) url('/Images/beauty.png') center/cover no-repeat;
@@ -1274,6 +1274,43 @@ const easterEggs = {
 
 
         const audio = new Audio("/Files/calc.mp3"); 
+        audio.loop = false;
+        audio.volume = 0.8;
+        audio.play();
+
+
+        const cleanup = () => {
+            overlay.remove();
+            audio.pause();
+        };
+        overlay.onclick = cleanup;
+        setTimeout(cleanup, 12000); 
+
+        document.body.appendChild(overlay);
+
+
+        document.body.style.animation = "shake 0.5s infinite";
+        setTimeout(() => document.body.style.animation = "", 12000);
+    },
+    "shiloh": () => {        
+
+        if (document.getElementById("easteregg-overlay")) return;
+
+        // Create overlay
+        const overlay = document.createElement("div");
+        overlay.id = "easteregg-overlay";
+        overlay.style.cssText = `
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.8) url('/Images/shiloh.png') center/cover no-repeat;
+            z-index: 99999; display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+        `;
+
+        const text = document.createElement("h1");
+        overlay.appendChild(text);
+
+
+        const audio = new Audio("/Files/lobotomy.mp3"); 
         audio.loop = false;
         audio.volume = 0.8;
         audio.play();
