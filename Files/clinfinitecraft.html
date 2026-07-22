@@ -1,14 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<body>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
+
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/genizy/google-class/nova-craft/vite.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn.jsdelivr.net/gh/bubblfan/google-class/nova-craft/vite.svg"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>MVUnblocked</title>
-    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
-    <base href="https://cdn.jsdelivr.net/gh/genizy/google-class/nova-craft/">
-    <script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/genizy/google-class/nova-craft/assets/index-CQ1EvTOM.js"></script>
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/genizy/google-class/nova-craft/assets/index-CzvCHSYC.css">
+    <base
+      href="https://cdn.jsdelivr.net/gh/bubblfan/google-class/nova-craft/"
+    />
+    <script
+      type="module"
+      crossorigin
+      src="https://cdn.jsdelivr.net/gh/bubblfan/google-class/nova-craft/assets/index-CQ1EvTOM.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/bubblfan/google-class/nova-craft/assets/index-CzvCHSYC.css"
+    />
   </head>
   <body>
     <div id="root"></div>

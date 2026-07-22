@@ -2,17 +2,38 @@
 <!-- Ultimate Game Stash file--> 
 <!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
 
-
+<!--should this even be here???-->
 
 
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<body>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
+
     <base href="https://cdn.jsdelivr.net/gh/web-ports/fnae@afd4e5071add297d6169665a4f999d62f312532e/">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | Five Night's at BIG E</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>

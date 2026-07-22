@@ -9,9 +9,29 @@
 <html>
 
 <head>
-    <base href="https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@main/bowmasters/">
-    <title>Bowmasters</title>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<body>
 
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
+
+    <base href="https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@main/bowmasters/">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="mobile-web-app-capable" content="yes"/>
     <meta name="apple-touch-fullscreen" content="yes"/>

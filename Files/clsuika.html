@@ -4,6 +4,28 @@
 <!-- Ultimate Game Stash file--> 
 <!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
 
+<head>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<body>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
 
 <html lang="en-us"><head><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-F32JC4N3VY&amp;cx=c&amp;_slc=1"></script><script src="https://s0.2mdn.net/instream/video/client.js" async="" type="text/javascript"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" id="analytics" async="" src=""></script><script type="text/javascript" async="" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script><script id="gamemonetize-sdk" src=""></script><script src="//www.google.com/jsapi"></script><script>window.parent.maeExportApis_();</script>
 

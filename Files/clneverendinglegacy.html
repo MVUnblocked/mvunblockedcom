@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>NeverEnding Legacy</title>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<body>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
+
 <!--
 Code and graphics copyright Orteil, 2016-2017
 Feel free to alter this code to your liking, but please do not re-host it, do not profit from it and do not present it as your own.
