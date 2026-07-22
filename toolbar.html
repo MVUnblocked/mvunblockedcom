@@ -80,13 +80,18 @@
             backdrop-filter: blur(10px);
             top: 78px;
             width: 50px;
+            padding: 10px 20px;
             height: 10px;
-            background: url(https://mvunblocked.com/Images/ui/arrow.png);
+            background-image: url(https://mvunblocked.com/Images/ui/arrow.png);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            transition: transform 0.50s cubic-bezier(.34,1.56,.64,1);
+            transition: transform 0.50s cubic-bezier(.34,1.56,.64,1),
+            padding 0.35s cubic-bezier(.34,1.56,.64,1);
             z-index: 99999999;
+        }
+        .drop-down:hover {
+            padding: 10px 28px;
         }
 
 
