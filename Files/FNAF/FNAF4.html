@@ -7,14 +7,14 @@
 <html lang="en">
 
 <head>
-    <title>MVUnblocked</title>
+        <title>MVUnblocked</title>
     <link rel="shortcut icon" type="image/jpg" href="mvunblocked.com/MVLogo.ico"/>
-</head>
 <body>
+
     <div id="toolbar-slot"></div>
-</body>
+
 <script>
-fetch('mvunblocked.com/toolbar.html')
+fetch('/toolbar.html')
     .then(res => res.text())
     .then(html => {
         const slot = document.getElementById('toolbar-slot');
