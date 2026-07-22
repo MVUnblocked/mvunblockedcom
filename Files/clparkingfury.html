@@ -1,17 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <base href = "https://cdn.jsdelivr.net/gh/cooldude2349/everything@main/parkfury/">
-	<meta charset="UTF-8" />
-	<head>
     <title>MVUnblocked</title>
-    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
-</head>
+    <link rel="shortcut icon" type="image/jpg" href="MVLogo.ico"/>
 <body>
     <div id="toolbar-slot"></div>
 </body>
 <script>
-fetch('/toolbar.html')
+fetch('toolbar.html')
     .then(res => res.text())
     .then(html => {
         const slot = document.getElementById('toolbar-slot');
@@ -24,6 +20,12 @@ fetch('/toolbar.html')
         });
     });
 </script>
+    <base href = "https://cdn.jsdelivr.net/gh/cooldude2349/everything@main/parkfury/">
+	<meta charset="UTF-8" />
+	<head>
+
+</head>
+
 	<script src="src/School.inlined.js"></script>
 	<style type="text/css" media="screen">
 		html, body { height:100%; background-color: #000000;}
