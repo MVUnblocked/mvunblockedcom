@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>MVUnblocked</title>
-    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
-    <meta name="google-site-verification" content="ZBJMRDn3iyv517rJKjM_Kv8bGIDELDMu42Nla7FUYrw" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6553820111354942"
-     crossorigin="anonymous"></script>
-    <meta name="description" content="MVUnblocked is a unblocked games website for Mount Vernon Schools. Play over 50+ games on this website. Games include Retrobowl, Minecraft, Doge Miner, Mario, Punch Out, Block Blast, Paper.io, Subway Surfers, and MotoX3M, for free." />
-    <meta name="keywords" content="minecraft, eaglercraft, singleplayer, applet, replit, browser, html5, javascript, chromebook, doge miner 2, retrobowl, retrobowl unblocked, retrobowl college, retrobowl college unblocked, blockblast, block blast, paper.io, paper.io 2, paper.io unblocked, subway surfers, ovo, vex, motox3m, deathchase, kartbros, kart bros, baseball bros, basket bros, football bros, coreball, amongus, among us, ai, chatgpt, run3, run 3, mario, learn to fly, monkey mart, gunspin, gun spin, five nights at freddys, fnaf" />
-    <meta property="og:title" content="MVUnblocked | Main Page" />
-    <meta property="og:locale" content="en-US" />
-    <meta property="og:type" content="website" />
-    <style>
+  <style>
 
+        #toolbox, #toolbox * {
+            box-sizing: content-box;
+        }
         body {
             font-family: "Poppins", sans-serif;
-            background-image: url("/Images/Background.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
             color: white;
-            overflow: hidden;
         }
 
         h1, h4, h5, h6 {
@@ -32,6 +16,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            z-index: 9999999;
         }
         .toolbar {
             display: flex;
@@ -44,6 +29,7 @@
             top: 1%;
             left: 50%;
             width: 400px;
+            z-index: 9999999;
             transform: translateX(-50%);
             border-radius: 20px;
             backdrop-filter: blur(10px);
@@ -88,48 +74,9 @@
             background-repeat: no-repeat;
             background-position: center;
             transition: transform 0.50s cubic-bezier(.34,1.56,.64,1);
+            z-index: 99999999;
         }
-        .header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
 
-.centered-text {
-    background-color: none;
-    padding: 10px;
-    border-radius: 4px;
-    display: block;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.centered-text h1 {
-    margin: 0;
-    font-size: 70px;
-    font-weight: bolder;
-}
-.centered-text h2 {
-    margin: 0;
-    font-size: 50px;
-    font-weight: normal;
-}
-
-.games-title {
-    font-size: 140px;
-    font-weight: 900;
-    letter-spacing: 10px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-}
-
-.games-title span {
-    display: inline-block;
-}
 
 
     </style>
@@ -148,27 +95,6 @@
     </div>
         <button class="drop-down" id="drop-down" onclick="hideToolbox()"></button>
     </div>
-    
-    <center>
-        <div class="header-container">
-            <div class="centered-text">
-        <h1>
-            <span style="color:rgb(129, 29, 42);">M</span><span style="color:rgb(172, 172, 172);">V</span>UNBLOCKED
-        </h1>
-
-        <h2>For all of your Mount Vernon needs</h2>
-
-        
-        </div>
-    </div>
-       
-        
-    </center>
-    		<footer>
-                <div>
-                    <span>Not affliated with Mount Vernon Schools. Made by Aiden</span>
-                </div>
-		</footer>
     <script>
 
         // let width = 400;

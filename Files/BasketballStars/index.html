@@ -11,6 +11,23 @@
     </head>
     <script src="/js/main.js"></script>
     <body>
+        
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
         <div id="content"></div>
         <div id="orientation"></div>
         <div id="loader">Loading ...</div>

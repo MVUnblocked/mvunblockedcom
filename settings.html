@@ -201,16 +201,23 @@ body {
     </style>
 </head>
 <body>
-    <div class="toolbar">
-        <img class="logo" src="/MVLogo.ico" alt="Logo">
-        <ul class="nav-links">
-            <li><a class="nav-link" href="/">Home</a></li>
-            <li><a class="nav-link" href="/games">Games</a></li>
-            <li><a class="nav-link" href="/faq">FAQ</a></li>
-            <li><a class="nav-link" href="/requests">Requests</a></li>
-            <li><a class="nav-link" href="/settings">Settings</a></li>
-        </ul>
-    </div>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('./toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
     
         <div class="header-container">
             <div class="centered-text">
