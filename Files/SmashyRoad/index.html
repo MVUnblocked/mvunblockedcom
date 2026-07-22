@@ -10,9 +10,28 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-<title>MVUnblocked</title>
+<head>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+<body>
 
-<link rel="shortcut icon" href="/MVLogo.ico">
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
+
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/abisdbest/classroom.google.com@85146ac051b67a3c32ebdf898bb0144d818d580b/drive.google.com/escape%20road/TemplateData/style.css">
 
