@@ -11,7 +11,7 @@
     <div id="toolbar-slot"></div>
 </body>
 <script>
-fetch('./toolbar.html')
+fetch('/toolbar.html')
     .then(res => res.text())
     .then(html => {
         const slot = document.getElementById('toolbar-slot');
