@@ -3,8 +3,27 @@
 <head>
     <base href = "https://cdn.jsdelivr.net/gh/cooldude2349/everything@main/parkfury/">
 	<meta charset="UTF-8" />
-	    <title>MVUnblocked</title>
+	<head>
+    <title>MVUnblocked</title>
     <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
+</head>
+<body>
+    <div id="toolbar-slot"></div>
+</body>
+<script>
+fetch('./toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
 	<script src="src/School.inlined.js"></script>
 	<style type="text/css" media="screen">
 		html, body { height:100%; background-color: #000000;}
