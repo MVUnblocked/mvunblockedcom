@@ -7,6 +7,28 @@
 <html lang="en">
 
 <head>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
+<body>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
+
+</body>
 	<base href="https://cdn.jsdelivr.net/gh/genizy/fnaf@latest/2/">
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="icon" type="image/x-icon" href="/MVLogo.ico" />
