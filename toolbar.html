@@ -154,6 +154,26 @@
             }
         }
 
+        var poorguy = Math.floor(Math.random() * 1000000);
+        console.log(poorguy);
+            if (poorguy == 1) {
+                localStorage.setItem('lottery', "true");
+            }
+
+            if (localStorage.getItem("lottery") == "true") {
+                console.log("poor guy")
+                window.alert("email me at aidenaaron005@gmail.com if you see this")
+                const shiloh = document.createElement("div");
+                shiloh.id = "shiloh-o";
+                shiloh.style.cssText = `
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.8) url('/Images/poorguy.PNG') center/cover no-repeat;
+            z-index: 999999999; display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+        `;
+        document.body.appendChild(shiloh);
+            }
+
     update();
 
     </script>

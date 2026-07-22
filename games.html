@@ -1347,7 +1347,7 @@ fetch('./toolbar.html')
             "dillan is one smart cookie"
         ];
 
-        // Function to set a random heading
+        // i... i understand this now...
         function setRandomHeading() {
             var randomIndex = Math.floor(Math.random() * headings.length);
             document.getElementById("random-heading").innerHTML = headings[randomIndex];
@@ -1372,7 +1372,7 @@ const easterEggs = {
 
         if (document.getElementById("easteregg-overlay")) return;
 
-        // Create overlay
+        // and this... oh my god thank you mozilla docs you are a saint
         const overlay = document.createElement("div");
         overlay.id = "easteregg-overlay";
         overlay.style.cssText = `
