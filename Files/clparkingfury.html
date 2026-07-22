@@ -2,12 +2,12 @@
 <html>
 <head>
     <title>MVUnblocked</title>
-    <link rel="shortcut icon" type="image/jpg" href="MVLogo.ico"/>
+    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
 <body>
     <div id="toolbar-slot"></div>
 </body>
 <script>
-fetch('toolbar.html')
+fetch('/toolbar.html')
     .then(res => res.text())
     .then(html => {
         const slot = document.getElementById('toolbar-slot');
