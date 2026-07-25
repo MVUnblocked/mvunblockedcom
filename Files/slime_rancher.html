@@ -7,10 +7,29 @@ i just edited it a bit to make it better for gn-math
 <html lang="en-us">
 
 <head>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<body>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
     <base href="https://cdn.jsdelivr.net/gh/web-ports/slime-ranchers@main/">
     <meta charset="utf-8">
-    <title>MVUnblocked</title>
-    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
     <link rel="stylesheet" href="TemplateData/style.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
     <script src="TemplateData/UnityProgress.js"></script>

@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MVUnblocked</title>
-    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<body>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
     <meta name="google-site-verification" content="ZBJMRDn3iyv517rJKjM_Kv8bGIDELDMu42Nla7FUYrw" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <style>
@@ -105,17 +124,7 @@
     </style>
 </head>
 <body>
-<div class="toolbar">
-    <img class="logo" src="/image-removebg-preview (56).png" alt="Logo">
-    <ul class="nav-links">
-        <li><a class="nav-link" href="/">Home</a></li>
-        <li><a class="nav-link" href="/gamesMV.html">Games</a></li>
-        <li><a class="nav-link" href="/domain.html">Domains</a></li>
-        <li><a class="nav-link" href="/faq">FAQ</a></li>
-        <li><a class="nav-link" href="/requests">Requests</a></li>
-        <li><a class="nav-link" href="/settings">Settings</a></li>
-    </ul>
-</div>
+
 
 
 <div class="center-container">

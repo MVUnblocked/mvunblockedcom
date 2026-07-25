@@ -1,3 +1,25 @@
+<head>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<body>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7856P3VNT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -9,8 +31,6 @@
   <head>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script>
-          <title>MVUnblocked</title>
-    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
     <script src="https://s0.2mdn.net/instream/video/client.js" async="" type="text/javascript"></script>
     <script async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script type="text/javascript" id="analytics" async="" src="https://cdn.jsdelivr.net/gh/st39/sdk@main/ga.js"></script>

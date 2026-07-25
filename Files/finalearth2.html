@@ -6,10 +6,29 @@
 
   gtag('config', 'G-L7856P3VNT');
 </script><html>
+  <head>
+        <title>MVUnblocked</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://mvunblocked.com/MVLogo.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<body>
+
+    <div id="toolbar-slot"></div>
+
+<script>
+fetch('/toolbar.html')
+    .then(res => res.text())
+    .then(html => {
+        const slot = document.getElementById('toolbar-slot');
+        slot.innerHTML = html;
+
+        slot.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
 <base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/final%20earth%202/">
-<head>
-    <title>MVUnblocked</title>
-    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
   <meta charset="utf-8" />
   <meta name="author" content="Florian van Strien"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
